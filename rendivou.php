@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $notes = $_POST['notes'];
 
   // Send email notification
-  $to      = "your-email@example.com"; // Replace with your email
+  $to      = "darkwoodbargewi@gmail.com"; // Replace with your email
   $subject = "New Appointment Booking";
   $message = "New booking details:\nName: $name\nEmail: $email\nPhone: $phone\nDate: $date\nTime: $time\nNotes: $notes";
   $headers = "From: webmaster@example.com"; // Replace with an appropriate sender
