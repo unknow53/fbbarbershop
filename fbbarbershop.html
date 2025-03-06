@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>High-End Barbershop</title>
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.5em;
+    }
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav a, nav span {
+      color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+    .hero {
+      background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .hero h2 {
+      font-size: 3em;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .services, .gallery, .booking {
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .services h2, .gallery h2, .booking h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .service-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 15px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .booking form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .booking form input, .booking form textarea, .booking form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .booking form button {
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .booking form button:hover {
+      background: #444;
+    }
+    /* Modal Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover, .close:focus {
+      color: black;
+      text-decoration: none;
+    }
+    .time-slot {
+      cursor: pointer;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin: 5px;
+      display: inline-block;
+    }
+    .time-slot:hover {
+      background-color: #f0f0f0;
+    }
+    .social {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+    }
+    .social a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #222;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>High-End Barbershop</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact</a>
+    <span><a href="tel:1234567890">(123) 456-7890</a></span>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>Experience the Ultimate Grooming</h2>
+</div>
+
+<section id="services" class="services">
+  <h2>Our Services & Pricing</h2>
+  <div class="service-item">
+    <span>Classic Haircut</span>
+    <span>$25</span>
+  </div>
+  <div class="service-item">
+    <span>Beard Trim</span>
+    <span>$15</span>
+  </div>
+  <div class="service-item">
+    <span>Hot Towel Shave</span>
+    <span>$30</span>
+  </div>
+  <div class="service-item">
+    <span>Kids' Cut</span>
+    <span>$20</span>
+  </div>
+</section>
+
+<section id="gallery" class="gallery">
+  <h2>Our Work</h2>
+  <div class="gallery-grid">
+    <img src="https://via.placeholder.com/300x200" alt="Haircut Example 1">
+    <img src="https://via.placeholder.com/300x200" alt="Haircut Example 2">
+    <img src="https://via.placeholder.com/300x200" alt="Haircut Example 3">
+    <img src="https://via.placeholder.com/300x200" alt="Haircut Example 4">
+  </div>
+</section>
+
+<section id="booking" class="booking">
+  <h2>Book an Appointment</h2>
+  <form>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+    <input type="date" name="date" required>
+    <!-- Time slot input (read-only) with a button to choose a time -->
+    <input type="text" name="time" id="timeInput" placeholder="Selected Time Slot" readonly required>
+    <button type="button" id="chooseTimeButton">Choose Appointment Time</button>
+    <textarea name="notes" rows="4" placeholder="Additional Notes"></textarea>
+    <button type="submit">Submit Booking</button>
+  </form>
+</section>
+
+<!-- Modal for Appointment Time Selection -->
+<div id="appointmentModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Select an Appointment Time</h2>
+    <p>Please choose one of the available time slots:</p>
+    <div id="timeSlots">
+      <!-- Dummy time slot options; replace or update dynamically as needed -->
+      <div class="time-slot" data-time="10:00 AM">10:00 AM</div>
+      <div class="time-slot" data-time="11:00 AM">11:00 AM</div>
+      <div class="time-slot" data-time="12:00 PM">12:00 PM</div>
+      <div class="time-slot" data-time="1:00 PM">1:00 PM</div>
+      <div class="time-slot" data-time="2:00 PM">2:00 PM</div>
+      <div class="time-slot" data-time="3:00 PM">3:00 PM</div>
+      <div class="time-slot" data-time="4:00 PM">4:00 PM</div>
+    </div>
+  </div>
+</div>
+
+<section id="contact" class="social">
+  <h2>Connect with Us</h2>
+  <p>Call us at <a href="tel:1234567890" style="color: #fff;">(123) 456-7890</a></p>
+  <a href="https://www.snapchat.com" target="_blank"><i class="fab fa-snapchat"></i></a>
+  <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</section>
+
+<footer>
+  <p>&copy; 2025 High-End Barbershop. All rights reserved.</p>
+  <p>Phone: <a href="tel:1234567890" style="color: #fff;">(123) 456-7890</a></p>
+</footer>
+
+<script>
+  // Modal functionality
+  var modal = document.getElementById("appointmentModal");
+  var btn = document.getElementById("chooseTimeButton");
+  var span = document.getElementsByClassName("close")[0];
+  var timeInput = document.getElementById("timeInput");
+
+  // Open the modal when button is clicked
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // Close the modal when the user clicks on the (x)
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Close the modal if user clicks outside the modal content
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Add click event for each time slot to fill the booking form
+  var timeSlots = document.getElementsByClassName("time-slot");
+  for (var i = 0; i < timeSlots.length; i++) {
+    timeSlots[i].addEventListener("click", function() {
+      var selectedTime = this.getAttribute("data-time");
+      timeInput.value = selectedTime;
+      modal.style.display = "none";
+    });
+  }
+</script>
+
+</body>
+</html>
