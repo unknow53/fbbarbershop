@@ -11,14 +11,12 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: Arial, sans-serif;
       background-color: #111; /* Black background */
       color: #fff; /* White text */
       line-height: 1.6;
     }
-
     header {
       background: #111; /* Black background */
       color: #ff0000; /* Dark Red text */
@@ -27,24 +25,20 @@
       position: relative;
       text-shadow: 0 0 10px #ff0000; /* Dark Red neon glow */
     }
-
     header h1 {
       font-size: 2.5em;
     }
-
     .contact-number {
       margin-top: 10px;
       font-size: 1.2em;
       color: #00bfff; /* Neon Blue for contact number */
       text-shadow: 0 0 5px #00bfff; /* Neon Blue glow effect */
     }
-
     nav {
       position: absolute;
       top: 20px;
       right: 20px;
     }
-
     nav a {
       color: #00bfff; /* Neon Blue for links */
       margin-left: 15px;
@@ -52,13 +46,6 @@
       font-size: 1.2em;
       text-shadow: 0 0 5px #00bfff; /* Neon Blue glow effect */
     }
-
-    .icon-barber {
-      width: 60px;
-      height: auto;
-      margin: 20px 0; /* Space between navigation and the hero text */
-    }
-
     .hero {
       background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
       height: 500px;
@@ -68,52 +55,50 @@
       color: #fff;
       text-shadow: 0 0 10px #00bfff; /* Neon Blue glow effect */
     }
-
     .hero h2 {
       font-size: 3em;
     }
-
+    .icon-barber {
+      width: 120px; /* Increased size of the logo */
+      height: auto;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%); /* Center the logo horizontally */
+    }
     section {
       padding: 40px 20px;
     }
-
     .service-item {
       display: flex;
       justify-content: space-between;
       padding: 10px 0;
       border-bottom: 1px solid #444; /* Dark gray separator */
     }
-
     .service-item span {
       font-size: 1.2em;
     }
-
     .service-item span:nth-child(2) {
       color: #ff0000; /* Dark Red color for pricing */
     }
-
     .gallery {
       background: #00bfff; /* Neon Blue background for gallery */
       color: #111; /* Black text color */
     }
-
     .gallery h2 {
       color: #fff; /* White color for title */
       text-shadow: 0 0 5px #ff0000; /* Red glow effect on gallery title */
     }
-
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
-
     .gallery-grid img {
       width: 100%;
       height: auto;
       border-radius: 8px;
     }
-
     .booking form {
       display: grid;
       grid-gap: 10px;
@@ -123,9 +108,7 @@
       background: #111; /* Dark background for form */
       border-radius: 8px;
     }
-
-    .booking input,
-    .booking textarea {
+    .booking input, .booking textarea {
       padding: 10px;
       background: #222; /* Dark background for inputs */
       border: 1px solid #00bfff; /* Neon Blue border for inputs */
@@ -133,7 +116,6 @@
       font-size: 1em;
       border-radius: 4px;
     }
-
     .booking button {
       padding: 10px;
       background: #ff0000; /* Dark Red button */
@@ -143,11 +125,9 @@
       border-radius: 4px;
       cursor: pointer;
     }
-
     .booking button:hover {
       background: #ff4d4d; /* Lighter red on hover */
     }
-
     .social {
       text-align: center;
       padding: 20px;
@@ -155,14 +135,12 @@
       color: #00bfff; /* Neon Blue color */
       text-shadow: 0 0 5px #00bfff; /* Neon Blue glow effect */
     }
-
     .social a {
       color: #00bfff; /* Neon Blue for social media icons */
       margin: 0 10px;
       font-size: 1.5em;
       text-decoration: none;
     }
-
     footer {
       text-align: center;
       padding: 10px;
@@ -170,82 +148,13 @@
       color: #fff;
       text-shadow: 0 0 5px #ff0000; /* Dark Red glow effect */
     }
-
-    /* MEDIA QUERIES FOR RESPONSIVENESS */
-
-    /* For screens smaller than 768px (tablets and mobiles) */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2em; /* Smaller title on mobile */
-      }
-
-      nav {
-        position: relative;
-        top: 0;
-        right: 0;
-        text-align: center;
-        margin-top: 20px;
-      }
-
-      nav a {
-        margin-left: 0;
-        margin-right: 0;
-        display: inline-block;
-        font-size: 1em;
-        padding: 10px;
-      }
-
-      .hero h2 {
-        font-size: 2em;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 images per row on mobile */
-      }
-
-      .service-item {
-        flex-direction: column; /* Stack service items vertically on mobile */
-        align-items: center;
-        text-align: center;
-      }
-
-      .booking form {
-        padding: 10px;
-        max-width: 100%;
-      }
-
-      .booking input,
-      .booking textarea {
-        font-size: 1em;
-      }
-
-      .social a {
-        font-size: 1.2em; /* Smaller social media icons on mobile */
-      }
-    }
-
-    /* For screens smaller than 480px (very small mobile screens) */
-    @media (max-width: 480px) {
-      .hero h2 {
-        font-size: 1.5em; /* Smaller text for very small screens */
-      }
-
-      .service-item span {
-        font-size: 1em; /* Adjust price text for small screens */
-      }
-
-      .booking input,
-      .booking textarea {
-        font-size: 0.9em; /* Slightly smaller input fields on very small screens */
-      }
-    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Fb BARBERSHOP</h1>
-  <p class="contact-number">📞 Contact : +1 (438) 994-1855</p>
+  <h1>Barbershop Haut de Gamme</h1>
+  <p class="contact-number">📞 Contact : +1 (123) 456-7890</p>
   <nav>
     <a href="#services">Services</a>
     <a href="#gallery">Galerie</a>
@@ -253,7 +162,7 @@
     <a href="#contact">Contact</a>
   </nav>
   <!-- Barber Pole Image -->
-  <img src="https://cdn2.vectorstock.com/i/1000x1000/88/56/barbershop-logo-vintage-classic-style-salon-vector-35028856.jpg" alt="Barber Pole Icon" class="icon-barber">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Barber_pole%2C_Ohio.jpg" alt="Barber Pole Icon" class="icon-barber">
 </header>
 
 <div class="hero">
@@ -285,7 +194,7 @@
   <div class="gallery-grid">
     <img src="https://via.placeholder.com/300x200" alt="Exemple de Coupe 1">
     <img src="https://via.placeholder.com/300x200" alt="Exemple de Coupe 2">
-   <img src="https://via.placeholder.com/300x200" alt="Exemple de Coupe 3">
+    <img src="https://via.placeholder.com/300x200" alt="Exemple de Coupe 3">
     <img src="https://via.placeholder.com/300x200" alt="Exemple de Coupe 4">
   </div>
 </section>
@@ -305,7 +214,7 @@
 
 <section id="contact" class="social">
   <h2>Contactez-nous</h2>
-    <p>📞 Appelez-nous : +1 (123) 456-7890</p>
+  <p>📞 Appelez-nous : +1 (123) 456-7890</p>
   <div>
     <a href="https://www.instagram.com" target="_blank">
       <i class="fab fa-instagram"></i> Instagram
@@ -323,7 +232,7 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 FBBarbershop . Tous droits réservés.</p>
+  <p>&copy; 2025 Barbershop Haut de Gamme. Tous droits réservés.</p>
 </footer>
 
 </body>
