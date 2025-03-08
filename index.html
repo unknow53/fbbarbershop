@@ -13,17 +13,17 @@
     }
     body {
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
+      background-color: #111; /* Black background */
+      color: #fff; /* White text */
       line-height: 1.6;
     }
     header {
-      background: #000;
-      color: #0ff;
+      background: #111; /* Black background */
+      color: #ff0000; /* Dark Red text */
       padding: 20px 0;
       text-align: center;
       position: relative;
-      text-shadow: 0 0 10px #0ff;
+      text-shadow: 0 0 10px #ff0000; /* Dark Red neon glow */
     }
     header h1 {
       font-size: 2.5em;
@@ -31,6 +31,8 @@
     .contact-number {
       margin-top: 10px;
       font-size: 1.2em;
+      color: #00bfff; /* Neon Blue for contact number */
+      text-shadow: 0 0 5px #00bfff; /* Neon Blue glow effect */
     }
     nav {
       position: absolute;
@@ -38,11 +40,11 @@
       right: 20px;
     }
     nav a {
-      color: #0ff;
+      color: #00bfff; /* Neon Blue for links */
       margin-left: 15px;
       text-decoration: none;
       font-size: 1.2em;
-      text-shadow: 0 0 5px #0ff;
+      text-shadow: 0 0 5px #00bfff; /* Neon Blue glow effect */
     }
     .hero {
       background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
@@ -51,36 +53,89 @@
       align-items: center;
       justify-content: center;
       color: #fff;
-      text-shadow: 0 0 10px #0ff;
+      text-shadow: 0 0 10px #00bfff; /* Neon Blue glow effect */
     }
     .hero h2 {
       font-size: 3em;
     }
     .icon-barber {
+      width: 60px;
+      height: auto;
       position: absolute;
       top: 10px;
       left: 10px;
-      width: 60px;
-      height: auto;
-      filter: drop-shadow(0 0 10px #0ff);
-      animation: spin 3s infinite linear;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
     }
     section {
       padding: 40px 20px;
     }
+    .service-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #444; /* Dark gray separator */
+    }
+    .service-item span {
+      font-size: 1.2em;
+    }
+    .service-item span:nth-child(2) {
+      color: #ff0000; /* Dark Red color for pricing */
+    }
+    .gallery {
+      background: #00bfff; /* Neon Blue background for gallery */
+      color: #111; /* Black text color */
+    }
+    .gallery h2 {
+      color: #fff; /* White color for title */
+      text-shadow: 0 0 5px #ff0000; /* Red glow effect on gallery title */
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .booking form {
+      display: grid;
+      grid-gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #111; /* Dark background for form */
+      border-radius: 8px;
+    }
+    .booking input, .booking textarea {
+      padding: 10px;
+      background: #222; /* Dark background for inputs */
+      border: 1px solid #00bfff; /* Neon Blue border for inputs */
+      color: #fff;
+      font-size: 1em;
+      border-radius: 4px;
+    }
+    .booking button {
+      padding: 10px;
+      background: #ff0000; /* Dark Red button */
+      color: #fff; /* White text */
+      font-size: 1.2em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .booking button:hover {
+      background: #ff4d4d; /* Lighter red on hover */
+    }
     .social {
       text-align: center;
       padding: 20px;
-      background: #000;
-      color: #0ff;
-      text-shadow: 0 0 5px #0ff;
+      background: #111; /* Dark background for social section */
+      color: #00bfff; /* Neon Blue color */
+      text-shadow: 0 0 5px #00bfff; /* Neon Blue glow effect */
     }
     .social a {
-      color: #0ff;
+      color: #00bfff; /* Neon Blue for social media icons */
       margin: 0 10px;
       font-size: 1.5em;
       text-decoration: none;
@@ -88,9 +143,9 @@
     footer {
       text-align: center;
       padding: 10px;
-      background: #222;
-      color: #0ff;
-      text-shadow: 0 0 5px #0ff;
+      background: #111; /* Dark footer */
+      color: #fff;
+      text-shadow: 0 0 5px #ff0000; /* Dark Red glow effect */
     }
   </style>
 </head>
@@ -105,7 +160,8 @@
     <a href="#booking">Réserver</a>
     <a href="#contact">Contact</a>
   </nav>
-  <img src="https://via.placeholder.com/60" alt="Barber Pole Icon" class="icon-barber">
+  <!-- Barber Pole Image -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Barber_pole%2C_Ohio.jpg" alt="Barber Pole Icon" class="icon-barber">
 </header>
 
 <div class="hero">
@@ -144,7 +200,7 @@
 
 <section id="booking" class="booking">
   <h2>Réserver un Rendez-vous</h2>
-  <form>
+  <form action="process_appointment.php" method="POST">
     <input type="text" name="name" placeholder="Votre Nom" required>
     <input type="email" name="email" placeholder="Votre Email" required>
     <input type="tel" name="phone" placeholder="Numéro de Téléphone" required>
